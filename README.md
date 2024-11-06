@@ -1,7 +1,4 @@
-```markdown
 # NVM Commands
-
-A collection of useful `nvm` (Node Version Manager) commands compiled into a single file for easy reference and execution. This README details how to use various `nvm` commands to manage Node.js versions.
 
 ## Prerequisites
 
@@ -60,12 +57,3 @@ nvm install --lts
 ```bash
 nvm install stable
 ```
-
-## Usage
-
-To execute any of these commands, navigate to your terminal or command prompt, ensure `nvm` is sourced properly, and enter the commands as shown above.
-
-For more details on using `nvm`, you can always run `nvm --help` or check out the [nvm documentation](https://github.com/nvm-sh/nvm#readme).
-```
-
-This format provides clear instructions and context, making it more accessible for users who may be unfamiliar with `nvm`.
