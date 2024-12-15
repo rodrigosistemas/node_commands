@@ -1,6 +1,6 @@
 # Node Commands
 
-## Craate Node Project
+## Create Node Project
 ```bash
 npm init
 ```
