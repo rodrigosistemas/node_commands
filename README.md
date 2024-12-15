@@ -1,5 +1,10 @@
 # Node Commands
 
+## Craate Node Project
+```bash
+npm init
+```
+
 ## Prerequisites
 
 Before using these commands, ensure that `nvm` is installed on your system. If `nvm` is not installed, you can follow the instructions on the [official nvm GitHub page](https://github.com/nvm-sh/nvm) to set it up.
