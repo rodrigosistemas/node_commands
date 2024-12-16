@@ -1,11 +1,11 @@
 # Node Commands
 
-## Create Node Project
+### Create Node Project
 ```bash
 npm init
 ```
 
-## Run Node Project
+### Run Node Project
 ```bash
 npm run dev
 ```
@@ -14,6 +14,20 @@ npm start
 ```
 ```bash
 npm run build
+```
+
+### Install Dependencies
+#### Global
+```bash
+npm install -g dependency_name
+```
+#### Localy
+```bash
+npm install dependency_name
+```
+#### Develop
+```
+npm install --save-dev dependency_name
 ```
 
 ## Prerequisites
