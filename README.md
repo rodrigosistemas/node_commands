@@ -30,6 +30,19 @@ npm install dependency_name
 npm install --save-dev dependency_name
 ```
 
+### View Dependencies
+```
+npm list
+```
+
+### Remove Dependencies
+```
+npm uninstall
+```
+```
+npm uninstall -g <package>
+```
+
 ## Prerequisites
 
 Before using these commands, ensure that `nvm` is installed on your system. If `nvm` is not installed, you can follow the instructions on the [official nvm GitHub page](https://github.com/nvm-sh/nvm) to set it up.
