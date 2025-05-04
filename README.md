@@ -1,102 +1,133 @@
-# Node Commands
+## Node Commands
 
-### Create Node Project
+### Create a New Node.js Project
+
 ```bash
 npm init
 ```
 
-### Run Node Project
+*Interactively create a `package.json`* for your project, prompting you for metadata (name, version, entry point, etc.).
+
+### Run Your Project in Development Mode
+
 ```bash
 npm run dev
 ```
+
+*Execute the “dev” script* defined in your `package.json` (often starts a watcher or nodemon to auto-reload on changes).
+
 ```bash
 npm start
 ```
+
+*Run the “start” script*—the conventional way to launch your application in production mode.
+
 ```bash
 npm run build
 ```
 
+*Execute the “build” script*—typically compiles/transpiles your source (e.g. Babel, Webpack, TypeScript) into a distributable format.
+
 ### Install Dependencies
-#### Global
+
+#### Globally
+
 ```bash
-npm install -g dependency_name
-```
-#### Localy
-```bash
-npm install dependency_name
-```
-#### Develop
-```
-npm install --save-dev dependency_name
+npm install -g <package_name>
 ```
 
-### View Dependencies
+*Make a package available system-wide*, so you can run its CLI from any directory.
+
+#### Locally (per project)
+
+```bash
+npm install <package_name>
 ```
+
+*Add a runtime dependency* to your project (saved under `dependencies` in `package.json`).
+
+#### For Development Only
+
+```bash
+npm install --save-dev <package_name>
+```
+
+*Add a build/test tool* (e.g. linters, transpilers) under `devDependencies`, not required in production.
+
+### View Installed Packages
+
+```bash
 npm list
 ```
 
-### Remove Dependencies
-```
-npm uninstall
-```
-```
-npm uninstall -g <package>
-```
+*Show the dependency tree* of all packages installed in the current project.
 
-## Prerequisites
-
-Before using these commands, ensure that `nvm` is installed on your system. If `nvm` is not installed, you can follow the instructions on the [official nvm GitHub page](https://github.com/nvm-sh/nvm) to set it up.
-
-## Commands
-
-Below are the common `nvm` commands used to manage Node.js versions:
-
-### Check the Current Node Version
+### Remove Packages
 
 ```bash
-node -v
-# or
-node --version
+npm uninstall <package_name>
 ```
 
-### List Locally Installed Node Versions
+*Remove a local dependency* from your project and `package.json`.
 
 ```bash
-nvm ls
+npm uninstall -g <package_name>
 ```
 
-### List Available Node Versions Remotely
+*Remove a globally installed package*.
+
+---
+
+## npx Commands
+
+### Create a New React App (example)
 
 ```bash
-nvm ls-remote
+npx create-react-app my-app
 ```
 
-### Install a Specific Version of Node
+*Download and run the `create-react-app` package once* to scaffold a new React project named `my-app`.
+
+### Run a One-Off CLI Tool
 
 ```bash
-nvm install 18.16.1
+npx nodemon server.js
 ```
 
-### Set the Default Node Version
+*Run `nodemon` without installing it globally*—useful for scripts you only need occasionally.
+
+### Execute a Local Package Binary
 
 ```bash
-nvm alias default 18.16.1
+npx ts-node src/index.ts
 ```
 
-### Switch to a Different Node Version
+*Invoke the TypeScript execution binary* bundled in your project’s `node_modules`, even if not installed globally.
+
+### Scaffold a Next.js Project
 
 ```bash
-nvm use 20.5.1
+npx create-next-app@latest
 ```
 
-### Install the Latest Long Term Support (LTS) Version of Node
+*Run the latest `create-next-app`* to generate a Next.js application.
 
-```bash
-nvm install --lts
-```
+---
 
-### Install the Latest Stable Version of Node
+## What Is `npx`?
 
-```bash
-nvm install stable
-```
+`npx` is a package runner that comes with npm (since v5.2.0). Its main features are:
+
+1. **One-time Package Execution**
+   Installs a package temporarily (in a cache) and runs its binary without polluting your global installs.
+
+2. **Local Binary Resolution**
+   If your project already has a CLI tool in `node_modules/.bin`, `npx` will run that version, ensuring consistency with your project’s dependencies.
+
+3. **Version Control**
+   You can specify a package version inline (e.g. `npx create-next-app@12.0.0`), so you always get the exact toolchain you need.
+
+4. **Zero-Install Scripting**
+   Great for quick tasks or one-off scripts—no need to modify your `package.json` or maintain global installs.
+
+By leveraging `npx`, you keep your environment clean, guarantee you’re running the correct version of a tool, and save the step of globally installing CLIs you only need occasionally.
