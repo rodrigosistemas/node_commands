@@ -75,26 +75,6 @@ npm uninstall -g <package_name>
 ```
 
 *Remove a globally installed package*.
-
----
-
-## npx Commands
-
-### Create a New React App (example)
-
-```bash
-npx create-react-app my-app
-```
-
-*Download and run the `create-react-app` package once* to scaffold a new React project named `my-app`.
-
-### Run a One-Off CLI Tool
-
-```bash
-npx nodemon server.js
-```
-
-*Run `nodemon` without installing it globally*—useful for scripts you only need occasionally.
    You can specify a package version inline (e.g. `npx create-next-app@12.0.0`), so you always get the exact toolchain you need.
 
 4. **Zero-Install Scripting**
