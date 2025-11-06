@@ -78,8 +78,3 @@ npm uninstall -g <package_name>
 
 *Remove a globally installed package*.
    You can specify a package version inline (e.g. `npx create-next-app@12.0.0`), so you always get the exact toolchain you need.
-
-4. **Zero-Install Scripting**
-   Great for quick tasks or one-off scripts—no need to modify your `package.json` or maintain global installs.
-
-By leveraging `npx`, you keep your environment clean, guarantee you’re running the correct version of a tool, and save the step of globally installing CLIs you only need occasionally.
